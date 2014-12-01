@@ -24,7 +24,9 @@ for _, row in ipairs(pixels.colors) do
 	minetest.register_node("pixels:"..name, {
 		description = desc.." Pixel",
 		tiles = {"pixel_"..name..".png"},
-		groups = {snappy=2,choppy=2,oddly_breakable_by_hand=3,flammable=3,wool=1},
+		drawtype = "glasslike_framed_optional",
+		groups = {cracky=3,oddly_breakable_by_hand=3},
+		sunlight_propagates = true,
 --		sounds = default.node_sound_defaults(),
 	})
 end
