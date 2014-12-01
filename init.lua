@@ -1,4 +1,4 @@
-local pixel = {}
+local pixels = {}
 pixels.colors = {
 	{"white",      "White",      nil},
 	{"grey",       "Grey",       "basecolor_grey"},
