@@ -24,9 +24,10 @@ for _, row in ipairs(pixels.colors) do
 	minetest.register_node("pixels:"..name, {
 		description = desc.." Pixel",
 		tiles = {"pixel_"..name..".png"},
-		drawtype = "glasslike_framed_optional",
 		groups = {cracky=3,oddly_breakable_by_hand=3},
-		sunlight_propagates = true,
+		drawtype = "glasslike",
+		stack_max = 10000,
+--		sunlight_propagates = true,
 --		sounds = default.node_sound_defaults(),
 	})
 end
