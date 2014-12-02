@@ -23,7 +23,7 @@ for _, row in ipairs(pixels.colors) do
 	local craft_color_group = row[3]
 	minetest.register_node("pixels:"..name, {
 		description = desc.." Pixel",
-		tiles = {"pixel_frame.png", "pixel_".'.name..'.png", ""pixel_'..name..'.png^pixel_frame.png"},
+		tiles = {"pixel_"..name..".png^pixel_frame.png"},
 		groups = {cracky=3,oddly_breakable_by_hand=3},
 		stack_max = 10000,
 		sunlight_propagates = true,
