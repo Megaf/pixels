@@ -23,6 +23,19 @@ for _, row in ipairs(pixels.colors) do
 	local craft_color_group = row[3]
 	minetest.register_node("pixels:"..name, {
 		description = desc.." Pixel",
+		tiles = {"pixel_"..name..".png"},
+		groups = {cracky=3,oddly_breakable_by_hand=3},
+		stack_max = 10000,
+		sunlight_propagates = true,
+	})
+end
+
+for _, row in ipairs(pixels.colors) do
+	local name = row[1]
+	local desc = row[2]
+	local craft_color_group = row[3]
+	minetest.register_node("pixels:"..name.."framed", {
+		description = "Framed (black border)"..desc.." Pixel",
 		tiles = {"pixel_"..name..".png^pixel_frame.png"},
 		groups = {cracky=3,oddly_breakable_by_hand=3},
 		stack_max = 10000,
