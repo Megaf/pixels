@@ -25,9 +25,7 @@ for _, row in ipairs(pixels.colors) do
 		description = desc.." Pixel",
 		tiles = {"pixel_"..name..".png"},
 		groups = {cracky=3,oddly_breakable_by_hand=3},
-		drawtype = "glasslike",
 		stack_max = 10000,
---		sunlight_propagates = true,
---		sounds = default.node_sound_defaults(),
+		sunlight_propagates = true,
 	})
 end
